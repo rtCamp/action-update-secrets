@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -ex
+
 if [[ -z "$TARGET_FILE" ]]; then
     echo 'TARGET_FILE not defined.'
     exit 1
@@ -9,6 +11,8 @@ if [[ -z "$SEARCH_KEY" ]]; then
     echo 'SEARCH_KEY not defined.'
     exit 1
 fi
+
+set +ex
 value="_VALUE"
 secret_value="$SEARCH_KEY$value"
 SECRET="$(echo ${!secret_value})"
