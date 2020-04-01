@@ -10,6 +10,7 @@ RUN apk update \
     && apk upgrade \
     && apk add \
         bash \
+        rsync \
     && rm -rf /var/cache/apk/*
 COPY *.sh /
 RUN chmod +x /*.sh
