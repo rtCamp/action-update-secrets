@@ -1,0 +1,9 @@
+name: 'Update secret in file'
+description: 'This action will add a secret in CI/CD to given file(s)'
+author: 'rtCamp'
+runs:
+  using: 'docker'
+  image: 'docker://rtcamp/action-update-secrets:v1.0.0'
+branding:
+  icon: 'lock'
+  color: 'white'
